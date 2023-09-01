@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulários</title>
+	</head>
+	<body>
+		<style>
+			table{
+				font-family: Arial, Calibri;
+				border-collapse: collapse; width: 100%;}
+			thead{
+				background-color: #214376; color: #ffffff;}
+			td,th{
+				border: 1px solid #000000; text-align: left;
+				padding: 8px;}
+			tr:nth-child(even) {background-color: #c0cfe4;}	
+		</style>
+		<header><h1>Formulários</h1></header>
+		<p>Formulários é um dos elementos mais utilizados para promover a interção entre usuários. A exemplo do que vimos com as tabelas, 
+		o formulário é composto por uma tag principal, um container, e várias tags “filhas”.Tags como campos de texto, de uma ou mais linhas;
+		campos de seleção; e botões fazem parte de sua estrutura. Além disso, para maior clareza, também usamos tags para informar a função dos campos do formulário.
+		São as chamadas “label”. A tabela a seguir lista as tags comumente usadas em um formulário:</p>
+		<!-- Tabela com Titulo-->
+		<table>
+			<tr>
+				<th>Tag</th>
+				<th>Função</th>
+			</tr>
+			<tr>
+				<td>&lt;form&gt</td>
+				<td>Container principal do formulário.</td>
+			</tr>
+			<tr>
+				<td>&lt;input&gt</td>
+				<td>Campo do formulário. Como há diversos tipos de campos, fazemos uso do atributo “type” para informar o tipo a ser utilizado – conforme veremos mais adiante.</td>
+			</tr>
+			<tr>
+				<td>&lt;textarea&gt</td>
+				<td>Campo de texto de múltiplas linhas.</td>
+			</tr>
+			<tr>
+				<td>&lt;select&gt&lt;option&gt</td>
+				<td>Campos de seleção, onde o container é definido pela tag &lt;select&gt e os itens pela tag &lt;option&gt.</td>
+			</tr>
+			<tr>
+				<td>Button</td>
+				<td>Campo de botão. Permite que uma ação seja executada no formulário – enviar o formulário, limpar os dados etc.</td>
+			</tr>
+			<tr>
+				<td>Label</td>
+				<td>Usado para definir um título, uma legenda, que descreva para que serve cada campo do formulário.</td>
+			</tr>
+			<tr><td colspan="2">Estrutura básica de tags do elemento formulário.</td></tr>
+		</table>
+		<p>É fácil identificar para o que serve cada campo do formulário anterior ao lermos o conteúdo da tag &lt;label&gt. 
+		Além disso, a tag &lt;fieldset&gt cria seções dentro do formulário, ajudando a separar os campos no código e a visualizar a página no navegador.
+		Isso fica ainda mais claro quando vinculamos ao &lt;fieldset&gt a tag &lt;legend&gt. Como vimos, é necessária uma atenção especial aos atributos 
+		uando tratamos de formulários.
+		Para melhor visualização e entendimento, todos os atributos contidos no código mencionado são descritos nesta tabela:<p/>
+		<table>
+			<tr>
+				<th>Tag</th>
+				<th>Atributo</th>
+				<th>Função do atributo</th>
+			</tr>
+			<tr>
+				<td>&lt;form&gt</td>
+				<td>action</td>
+				<td>Define a URL (endereço) para a qual os dados do formulário serão enviados.</td>
+			</tr>
+			<tr>
+				<td>&lt;form&gt</td>
+				<td>method</td>
+				<td>Define o método HTTP (POST ou GET) para envio dos dados.</td>
+			</tr>
+			<tr>
+				<td>&lt;label&gt</td>
+				<td>for</td>
+				<td>Vincula a tag lt;label&gt ao campo ao qual ela se refere. Este vínculo faz com que seja possível clicar na label para ativar o campo relacionado.</td>
+			</tr>
+			<tr>
+				<td>&lt;input&gt</td>
+				<td>minlength, maxlength</td>
+				<td>Definem a quantidade de caracteres mínima e máxima, respectivamente, permitida em um campo.</td>
+			</tr>
+			<tr>
+				<td>&lt;input&gt&lt;button&gt</td>
+				<td>type</td>
+				<td>Define o tipo do campo e, sobretudo, como ele se comporta.</td>
+			</tr>
+			<tr>
+				<td>&lt;option&gt</td>
+				<td>value.</td>
+				<td>Este atributo também pode ser utilizado na tag &lt;input&gt. Ele define o valor do campo.
+				No caso da &lt;option&gt, os seus valores possíveis são previamente definidos quando a página é codificada.
+				Já na &lt;input&gt, embora também possa ser previamente definido, normalmente é o usuário quem define o seu valor.</td>
+			</tr>
+			<tr><td colspan="3">Tags Básicas e seus atributos.</td></tr>
+		</table>
+		<h2>Atributos do Formulário</h2>
+		<h3>O atributo Type</h3>
+		<p>
+		Este atributo, dada a sua importância, precisa ser visto de forma aprofundada. 
+		Como já dito, além de definir o tipo do campo, ele também determina como este se comporta. 
+		No código apresentado na tabela é utilizado apenas o tipo “text”, que, no caso da tag &lt;input&gt,
+		corresponde ao seu valor padrão. Estes são apenas alguns exemplos.
+		</p>
+		<table>
+			<tr>
+				<th>Tipos</th>
+				<th>Descrição</th>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>Mascara o texto com asteriscos.</td>
+			</tr>
+			<tr>
+				<td>Hidden</td>
+				<td>Esconde o campo para não ser exibido no navegador.</td>
+			</tr>
+			<tr>
+				<td>CheckBox</td>
+				<td>Usado para seleção de valor através de click/check.</td>
+			</tr>
+			<tr>
+				<td>Radio</td>
+				<td>Usado para seleção exclusiva de valor – quando é apresentada mais de uma opção, apenas uma poderá ser selecionada, ao contrário do tipo “checkbox”.</td>
+			</tr>
+			<tr>
+				<td>Submit</td>
+				<td>Associada à tag &lt;button&gt, dispara o evento que envia/submete o formulário.</td>
+			</tr>
+			<tr>
+				<td>Reset</td>
+				<td>Associada à tag &lt;button&gt, dispara o evento que limpa os valores do formulário.</td>
+			</tr>
+			<tr>
+				<td>Button</td>
+				<td>Uma tag &lt;input&gt pode ser do tipo “button” – exercendo, assim, a mesma função da tag &lt;button&gt.</td>
+			</tr>
+		</table>
+		<h3>Exemplo de Inputs</h3>
+		<form action="/action_page.php">
+			<label for="username">Usuário:</label><br>
+			<input type="text" id="username"
+				name="username"><br />
+			<label for="pwd">Senha:</label><br>
+			<input type="password" id="pwd"
+			name="pwd"><br /><br />
+			<input type="submit" id="Submit"
+		</form>
+		<br /><br />
+		<form action="/action_page.php">
+			<input type="radio" id="html" name="fav_language" value="HTML"><label for="html">HTML</label><br />
+			<input type="radio" id="sql" name="fav_language" value="SQL"><label for="html">SQL</label><br />
+			<input type="radio" id="Python" name="fav_language" value="Python"><label for="html">Python</label><br /><br />
+			<input type="submit" id="Submit">
+		</form>
+		<br />
+		<h3>Input color</h3>
+			<label for="favcolor">Selecione sua cor favorita:</label>
+			<input type="color" id="favcolor" name="favocolor" value="#ff0000"><br />
+		<br />
+		<h3>Input Data</h3>
+			<label for="nascimento">Data de Nascimento:</label>
+			<input type="date" id="nascimento" name="nascimento"><br />
+		<footer>
+		<br /><br />
+		</footer>
+	</body>
+</html>

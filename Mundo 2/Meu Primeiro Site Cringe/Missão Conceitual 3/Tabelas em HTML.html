@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tabelas em HTML</title>
+	</head>
+	<body>
+		<style>
+			table{
+				font-family: Arial, Calibri;
+				border-collapse: collapse; width: 100%;}
+			thead{
+				background-color: #214376; color: #ffffff;}
+			td,th{
+				border: 1px solid #000000; text-align: center;
+				padding: 8px;}
+			tr:nth-child(even) {background-color: #c0cfe4;}	
+		</style>
+		<header><h1>Tabelas em HTML</h1></header>
+		
+		<p>
+			As tabelas não devem ser utilizadas para organizar a página. Para isso deve ser utilizado divs, css, entre outros.
+			As tabelas devem ser exclusivas para dados que serão planilhados.
+		</p>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Coluna A</th><th>Coluna B</th><th>Coluna C</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>A1</td><td>B1</td><td>C1</td>
+				</tr>
+				<tr>
+					<td>A2</td><td>B2</td><td>C2</td>
+				</tr>
+				<tr>
+					<td>A3</td><td>B3</td><td>C3</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr><td colspan="3">Rodapé</td></tr>
+			</tfoot>
+		</table>
+		<h3>Exemplo Prático</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Nome</th><th>Nascimento</th><th>Idade</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Geraldo</td><td>1979</td><td>44</td>
+				</tr>
+				<tr>
+					<td>Erica</td><td>1986</td><td>37</td>
+				</tr>
+				<tr>
+					<td>Oreo</td><td>2018</td><td>5</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr><td colspan="3">Familia Feliz</td></tr>
+			</tfoot>
+		</table>
+		<!--Tabela Simples -->
+		<h2>Tabela Simples</h2>
+		<table>
+			<tr>
+				<td>Alex</td>
+				<td>HTML</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>Ana</td>
+				<td>HTML</td>
+				<td>10</td>
+			</tr>
+		</table>
+		<!-- Tabela com Titulo-->
+		<h2>Tabela com Título</h2>
+		<table>
+			<tr>
+				<th>Aluno</th>
+				<th>Disciplina</th>
+				<th>Nota</th>
+			</tr>
+			<tr>
+				<td>Alex</td>
+				<td>HTML</td>
+				<td>10</td>
+			</tr>
+			<tr>
+				<td>Ana</td>
+				<td>HTML</td>
+				<td>10</td>
+			</tr>
+			
+		</table>
+		<!-- Tabela com Cabeçalho e Rodapé -->
+		<h2>Tabela com Cabeçalho e Rodapé</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Mês</th>
+					<th>Horas/Aula</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Junho</td>
+					<td>40</td>
+				</tr>
+				<tr>
+					<td>Julho</td>
+					<td>30</td>
+				</tr>
+			</tbody>
+			<tfoot>			
+				<tr>
+					<th>Total</th>
+					<th>70</th>
+				</tr>
+			</tfoot>
+		</table>
+		<!--Tabela com Colspan-->
+		<h2>Tabela com Colspan<h2>
+		<Table>
+			<tr>
+				<td>Aluno</td>
+				<td colspan="2">Disciplina</td>
+			</tr>
+			<tr>
+				<td>Alex</td>
+				<td>HTML</td>
+				<td>Ambiente Web</td>
+			</tr>
+		</Table>
+		<!--Tabela com rowspan-->
+		<h2>Tabela com rowspan<h2>
+		<Table>
+			<tr>
+				<td>Aluno</td>
+				<td rowspan="3">Disciplina</td>
+			</tr>
+			<tr>
+				<td>Alex</td>
+				<td>HTML</td>
+				<td>Ambiente Web</td>
+			</tr>
+			<tr>
+				<td>Ana</td>
+				<td>HTML</td>
+				<td>Ambiente Web</td>
+			</tr>
+		</Table>
+		<br /><br />	
+	</body>
+</html>
