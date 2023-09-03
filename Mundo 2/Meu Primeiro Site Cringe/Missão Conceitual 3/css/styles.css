@@ -1,0 +1,44 @@
+/* Outras propriedades de estilo comuns para body e fieldset */
+body {
+    font-family: "Calibri", Arial, sans-serif; font-size: 12px;
+}
+
+/* Define um estilo para todos os elementos <input> com a classe "larger-input" */
+input.larger-input {
+    width: 300px; /* Largura do campo de entrada */
+    padding: 8px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda com cor cinza */
+    border-radius: 4px; /* Cantos arredondados */
+    font-size: 12px; /* Tamanho da fonte */
+}
+
+/* Define um estilo para todos os elementos <input> com a classe "cpf-input", "short-input" e "select.sexo */
+input.short-input, input.mid-input, select.sexo {
+    /* Defina as propriedades de estilo desejadas */
+    width: 95px; /* Largura do campo de entrada */
+    padding: 8px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda com cor cinza */
+    border-radius: 4px; /* Cantos arredondados */
+    font-size: 12px; /* Tamanho da fonte */
+}
+
+input.mini-input {
+    width: 70px; /* Largura do campo de entrada */
+    padding: 8px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda com cor cinza */
+    border-radius: 4px; /* Cantos arredondados */
+    font-size: 12px; /* Tamanho da fonte */
+}
+
+/* Define um estilo para todas as tags <h2> */
+h2 {
+    color: #FF0000; /* Define a cor do texto como vermelho */
+}
+
+/* Defina um estilo para todos os elementos <label> */
+label {
+    display: inline-block; /* Permite definir largura e alinhar verticalmente */
+    width: 50px; /* Largura fixa para os rótulos */
+    text-align: right; /* Alinha o texto à direita dentro dos rótulos */
+    margin-right: 5px; /* Adicione margem à direita para espaço */
+}

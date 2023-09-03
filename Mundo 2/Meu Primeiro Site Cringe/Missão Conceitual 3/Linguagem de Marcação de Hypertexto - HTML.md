@@ -1,5 +1,7 @@
 # Linguagem de Marcação de Hypertexto - HTML ![html5](https://img.shields.io/badge/html5-E34F26?style=flat&logo=html5&logoColor=white)
 
+As informações aqui não estão completas nem revisadas.
+
 ### Módulo 1 - Estrutura de uma página WEB
 
 HTML 4 - Document Type Definition
@@ -47,3 +49,16 @@ Organizam o conteúdo em sí.
 Organizam a posição dos itens da páginas. Dão significados aos conteúdos da pagina.
 
 ## Tags HTML complexas
+
+## Validação de dados em formulários
+
+A importância da validade dos dados concorre com a importância da utilização das tags corretas e que permitam a **melhor experiência possível aos usuários**. Podemos dizer que, ao pensarmos na estrutura do formulário, nas tags e atributos, estamos pensando em quem vai preencher o formulário.
+
+* Tipos de validação:
+  * Que verifica se o dado inserido em um campo é consistente com o seu tipo e/ou padrão (pattern).
+  * Que verifica se um campo obrigatório foi preenchido.
+
+
+
+
+
