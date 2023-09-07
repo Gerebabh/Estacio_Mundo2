@@ -157,7 +157,7 @@ Há três formas usuais de aplicar estilos em um documento HTML fazendo uso de C
     <style type="text/css">
         /* Estes estilos serão aplicados apenas dentro da DIV */
         p{
-            Backgroun-color: blue;
+            Background-color: blue;
         }
     </style>
     <p>Texto do parágrafo</p>
