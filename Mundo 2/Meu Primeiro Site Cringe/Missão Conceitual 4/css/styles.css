@@ -73,3 +73,22 @@ button[type="reset"] {
 button:hover {
     background-color: #0055aa; /* Altere a cor de fundo quando o cursor estiver sobre o botão */
 }
+
+/* Teste CSS*/
+#p_teste {
+	text-align: center;
+	background-color: black;
+	color: orange;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+p {
+	text-align: left-side;
+	font-size: 16px;
+}
+
+header {
+	text-align: center;
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8">
+		<title>Introdução CSS</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"><!-- CSS - Externa link -->
+		<style type="text/css"> /* CSS INTERNO */
+			h3{
+				color: purple;
+				background-color: yellow; 
+				font-style: italic;
+				font-size: 30px;
+				/* Altera configurações para textos em h3 */
+			}
+		</style>
+	</head>
+	<body>
+		<header><h1>Introdução e testes com incorporação de CSS</h1></header>
+		
+		<p id="p_teste">Utilizando CSS Externo com Identificador por ID, no caso "id=p_teste".</p>
+		
+		<p style="background-color:green;color:black;height:150px;font-size:30px";>
+			Declaração CSS-Inline - style="background-color:green;color:black;height:150px;font-size:30p
+		</p>
+		
+		<h3>Texto em h3 utilizando formatação CSS Interna</h3><br />
+				
+		<h1>Teste abaixo da utilização da CSS em Escopo</h1>
+		
+		<!-- CSS em ESCOPO -->
+		<style type="text/css">
+			h4{
+				color: white;
+				background-color: black; 
+				font-style: italic;
+				font-size: 30px;
+				/* Altera configurações para textos em h4 */
+			}
+		</style>
+		<h4>CSS em Escopo - Mesmo tendo uma CSS definida em style para h4. Pode ser utilizada a CSS em escopo que altera a TAG logo em seguida.</h4>
+		<p>
+		<strong>Importante!!</strong><br />
+		<p>
+		* <strong>CSS Externo (link externo):</strong> Tem o maior peso e será aplicado a todos os elementos da página, a menos que seja substituído por estilos internos ou em escopo.<br />
+		* <strong>CSS Interno (dentro do &lt;head&gt;):</strong> Tem um peso intermediário e será aplicado a todos os elementos da página, a menos que seja substituído por estilos em escopo.<br />
+		* <strong>CSS em Escopo (dentro do &lt;body&gt;):</strong> Tem o menor peso e é aplicado apenas aos elementos dentro do escopo específico em que está definido. Ele será substituído por estilos CSS internos e externos.<br />
+    
+		Portanto, o &lt;head&gt; manterá a configuração se não for substituído por estilos internos ou em escopo. O peso determina a precedência na aplicação de estilos, com o CSS em escopo sendo o menos prioritário e o CSS externo o mais prioritário. Se houver conflitos entre estilos, o mais prioritário prevalecerá.
+		</p>
+
+	</body>
+</html>
