@@ -6,20 +6,27 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css"><!-- CSS - Externa link -->
 		<style type="text/css"> /* CSS INTERNO */
 			h3{
-				color: purple;
-				background-color: yellow; 
+				color: #14B611;
+				background-color: black; 
 				font-style: italic;
 				font-size: 30px;
 				/* Altera configurações para textos em h3 */
+			}
+			div{
+				color: blue;    
+			}
+			#ex2 > p {
+				color: red;
 			}
 		</style>
 	</head>
 	<body>
 		<header><h1>Introdução e testes com incorporação de CSS</h1></header>
+		<h1 id="tit_modulo">Módulo 1 - Como Funciona a CSS</h1>
 		
 		<p id="p_teste">Utilizando CSS Externo com Identificador por ID, no caso "id=p_teste".</p>
 		
-		<p style="background-color:green;color:black;height:150px;font-size:30px";>
+		<p style="background-color:black;color:green;height:150px;font-size:30px";>
 			Declaração CSS-Inline - style="background-color:green;color:black;height:150px;font-size:30p
 		</p>
 		
@@ -48,5 +55,110 @@
 		Portanto, o &lt;head&gt; manterá a configuração se não for substituído por estilos internos ou em escopo. O peso determina a precedência na aplicação de estilos, com o CSS em escopo sendo o menos prioritário e o CSS externo o mais prioritário. Se houver conflitos entre estilos, o mais prioritário prevalecerá.
 		</p>
 
+		<br /><hr><br />
+		
+		<h1 id="tit_modulo">Módulo 2 - Recursos de cores</h1>
+		
+		<div>
+			Texto solto na Div - Exemplo 1
+			<p>Texto do parágrafo que é filho da Div</p>
+			
+			O resultado do fragmento de código mostrará tanto o texto solto quanto o texto dentro da tag &lt;p&gt; com a cor azul. Isso significa que
+			a tag &lt;p&gt; herdou o estilo definido para o seu pai, a tag &lt;div&gt;.
+			
+		</div>
+		
+		<br /><br />
+		
+		<div id="ex2">
+			Texto solto na Div - Exemplo 2
+			<p>Texto do parágrafo que é filho da Div</p>
+			<p>Segundo parágrafo exemplo 2</p>
+			
+			O resultado do fragmento de código mostrará tanto o texto solto quanto o texto dentro da tag &lt;p&gt; com a cor azul. Isso significa que
+			a tag &lt;p&gt; herdou o estilo definido para o seu pai, a tag &lt;div&gt;.
+			
+		</div>
+		
+		<br /><br />
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Propriedade</th>
+					<th>Serve para definir</th>
+					<th>Onde pode ser utilizada</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>color</td>
+					<td>Cor de Textos</td>
+					<td>Elementos que contenham texto, como &lt;h1&gt;... &lt;h6&gt;, &lt;p&gt;, &lt;header&gt;, &lt;section&gt;, etc.</td>
+				</tr>
+				<tr>
+					<td>background-color</td>
+					<td>Cor de fundo dos elementos</td>
+					<td>Aplica-se a qualquer elemento HTML</td>
+				</tr>
+				<tr>
+					<td>border-color</td>
+					<td>Cor da borda</td>
+					<td>Aplica-se a qualquer elemento HTML</td>
+				</tr>
+				<tr>
+					<td>outline-color</td>
+					<td>Cor da borda externa</td>
+					<td>Aplica-se a qualquer elemento HTML</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br /><br />
+		
+		<h1>Input color</h1>
+			<label for="favcolor">Selecione a cor desejada:</label>
+			<input type="color" id="favcolor" name="favocolor" value="#ff0000"><br />
+
+		<br /><hr><br />
+		
+		<h1 id="tit_modulo">Recursos de textos e fontes</h1>
+		<p>Para alinhar o texto em razão ao container inserido deve-se utilizar &lt;text-align&gt; a ser definido em quatro valores `left, right, center, justify` .</p>
+		<p>Exemplo: &lt;td style="text-align: center;"&gt;centro&lt;/td&gt;</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Alinhamento</th>
+					<th>Exemplo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>left</td>
+					<td style="text-align: left;">esquerda</td>
+				</tr>
+				<tr>
+					<td>center</td>
+					<td style="text-align: center;">centro</td>
+				</tr>
+				<tr>
+					<td>rigth</td>
+					<td style="text-align: right;">direita</td>
+				</tr>
+				<tr>
+					<td>justify</td>
+					<td style="text-align: justify;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br />
+		
+		<p style="line-height: 1.5; font-size: 14px;">`line-height` define o espaçamento entre linhas. A maneira mais recomendada para declarar o espaçamento entre linhas é utilizando o valor em número.
+		Desse modo, o espaçamento será o resultado da multiplicação do valor definido pelo tamanho da fonte. Neste exemplo: 1.5 * 14px = 21.</p>
+
+		<br /><hr><br />		
 	</body>
 </html>

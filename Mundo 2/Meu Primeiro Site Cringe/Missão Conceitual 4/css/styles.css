@@ -38,7 +38,7 @@ h2 {
 /* Defina um estilo para todos os elementos <label> */
 label {
     display: inline-block; /* Permite definir largura e alinhar verticalmente */
-    width: 50px; /* Largura fixa para os rótulos */
+    width: 150px; /* Largura fixa para os rótulos */
     text-align: right; /* Alinha o texto à direita dentro dos rótulos */
     margin-right: 5px; /* Adicione margem à direita para espaço */
 }
@@ -84,11 +84,48 @@ button:hover {
 	font-style: italic;
 }
 
+#tit_modulo {
+	text-align: center;
+	background-color: blue;
+	color: white;
+	font-size: 30px;
+}
+
 p {
-	text-align: left-side;
+	text-align: left;
 	font-size: 16px;
 }
 
 header {
 	text-align: center;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	background-color: black;
+}
+
+table {
+    font-family: Arial, Calibri;
+	border-spacing: 1px;
+    width: 100%;
+	overflow: hidden;
+    border-radius: 10px; /* Arredondar cantos da tabela */
+    box-shadow: 0 10px 20px rgba(12, 24, 157, 0.7); /* Adicionar sombra */
+}
+
+thead {
+    background-color: #214376;
+    color: #ffffff;
+}
+
+td, th {
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #c0cfe4;
 }
