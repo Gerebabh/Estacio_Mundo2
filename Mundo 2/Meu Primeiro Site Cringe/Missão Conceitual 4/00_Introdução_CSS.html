@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Introdução CSS</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css"><!-- CSS - Externa link -->
 		<style type="text/css"> /* CSS INTERNO */
@@ -45,8 +46,11 @@
 			}
 		</style>
 		<h4>CSS em Escopo - Mesmo tendo uma CSS definida em style para h4. Pode ser utilizada a CSS em escopo que altera a TAG logo em seguida.</h4>
-		<p>
-		<strong>Importante!!</strong><br />
+		
+		<p><strong>Importante!!</strong></p>
+		
+		<br />
+		
 		<p>
 		* <strong>CSS Externo (link externo):</strong> Tem o maior peso e será aplicado a todos os elementos da página, a menos que seja substituído por estilos internos ou em escopo.<br />
 		* <strong>CSS Interno (dentro do &lt;head&gt;):</strong> Tem um peso intermediário e será aplicado a todos os elementos da página, a menos que seja substituído por estilos em escopo.<br />
@@ -122,7 +126,7 @@
 
 		<br /><hr><br />
 		
-		<h1 id="tit_modulo">Recursos de textos e fontes</h1>
+		<h2>Recursos de textos e fontes</h2>
 		<p>Para alinhar o texto em razão ao container inserido deve-se utilizar &lt;text-align&gt; a ser definido em quatro valores `left, right, center, justify` .</p>
 		<p>Exemplo: &lt;td style="text-align: center;"&gt;centro&lt;/td&gt;</p>
 		<table>
@@ -154,10 +158,71 @@
 			</tbody>
 		</table>
 		
-		<br />
+		<br /><br />
 		
-		<p style="line-height: 1.5; font-size: 14px;">`line-height` define o espaçamento entre linhas. A maneira mais recomendada para declarar o espaçamento entre linhas é utilizando o valor em número.
-		Desse modo, o espaçamento será o resultado da multiplicação do valor definido pelo tamanho da fonte. Neste exemplo: 1.5 * 14px = 21.</p>
+		<div class="accordion-item">
+			<input type="checkbox" id="item1">
+			<label class="accordion" for="item1">Font-Family</label>
+			<div class="content">
+			<p>Essa propriedade é utilizada para definir a família da fonte utilizada em página web ou em partes de seu conteúdo. Utilizando essa propriedade, é possível definir, por exemplo,
+			desde uma única fonte a uma lista de fontes, onde os seus valores são declarados em ordem de importância, da esquerda para direita.
+			Desse modo, caso determinada fonte não esteja disponível no dispositivo cliente, a próxima fonte definida será usada, e assim sucessivamente.
+			Caso nenhuma das fontes definidas esteja disponível no cliente, o navegador fará uso de uma fonte padrão.
+			  
+			Estes são exemplos de famílias de fonte: Arial, Verdana, Times New Roman (fontes com nomes compostos devem ser declaradas utilizando-se aspas), entre outras. 
+			Essas fontes e algumas outras formam o conjunto chamado de Fontes Seguras para web (Web Safe Fonts). Sempre que possível, deve-se dar preferência à utilização dessas fontes seguras,
+			pois possuem suporte pela maioria dos sistemas operacionais.
+			</p>
+			</div>
+		</div>
+		
+		<div class="accordion-item">
+			<input type="checkbox" id="item2">
+			<label class="accordion" for="item2">Font-Size</label>
+			<div class="content">
+			<p>A propriedade font-size é responsável por definir o tamanho do texto. Seus valores podem ser definidos com a utilização de diferentes unidades de medida,
+			como pixels, além de porcentagem etc.</p>
+			</div>
+		</div>
+		
+		<div class="accordion-item">
+			<input type="checkbox" id="item3">
+			<label class="accordion" for="item3">Font-Style</label>
+			<div class="content">
+			<p>Propriedade usada na estilização de textos aplicando o efeito de itálico. Seus valores possíveis são: normal (ou seja, tira o efeito do texto,
+			sendo o estilo padrão de todo elemento), italic e oblique (uma versão mais inclinada em relação ao itálico).</p>
+			</div>
+		</div>
+
+		<div class="accordion-item">
+			<input type="checkbox" id="item4">
+			<label class="accordion" for="item4">Font-Weight</label>
+			<div class="content">
+			<p>O peso de uma fonte é definido com a utilização dessa propriedade. Com ela, é possível aplicar o efeito de negrito em uma escala.
+			Seus valores possíveis são: normal, bold, lighter e bolder (aumentam ou diminuem o peso da fonte em relação ao peso da fonte de seu elemento pai);
+			e uma escala numérica de 100 a 900.</p>
+			</div>
+		</div>
+
+		<br /><br />
+		
+		<h2>Web Fontes</h2>
+		<p>As Web Fontes são um recurso importante em tipografia. Antes, a estilização de texto estava limitada às fontes disponíveis nos sistemas operacionais dos usuários. No entanto, com a introdução da regra <code>@font-face</code>, tornou-se possível usar Web Fontes. 
+		Essa propriedade permite a utilização de fontes que são baixadas pelo navegador quando a página é carregada. Isso oferece maior controle sobre o layout de uma página em relação às fontes, além da capacidade de usar fontes com designs visuais mais elaborados.</p>
+
+		<h2>Utilizando a regra <code>@font-face</code></h2>
+		<p>A regra <code>@font-face</code> do CSS permite que você incorpore fontes personalizadas em seu site, úteis quando você deseja usar uma fonte que não está disponível nos sistemas dos usuários. Aqui está uma explicação detalhada de como usar a regra <code>@font-face</code>:</p>
+		<ul>
+			<li><strong><code>@font-face</code></strong>: Esta regra é usada para definir uma fonte personalizada.</li>
+			<li><strong><code>font-family</code></strong>: Aqui, você nomeia a família da fonte que está importando, que será usada em seu CSS para aplicar a fonte aos elementos.</li>
+			<li><strong><code>src</code></strong>: Esta propriedade define onde o navegador deve procurar a fonte. Você pode especificar várias fontes aqui, e o navegador usará a primeira disponível. No exemplo abaixo, primeiro tenta carregar uma fonte local chamada ‘Minha Fonte Local’.
+			Se essa fonte não estiver disponível, tenta ‘Outra Fonte Local’. Se nenhuma fonte local estiver disponível, ele carregará a fonte da web no formato WOFF do caminho especificado.</li>
+			<li><strong><code>format</code></strong>: Esta propriedade especifica o formato da fonte da web. O formato mais comum é WOFF, mas existem outros, como TTF e EOT.</li>
+		</ul>
+		
+		<br /><hr><br />
+
+		<h1 id="tit_modulo">Módulo 3 - Conceitos de box model</h1>
 
 		<br /><hr><br />		
 	</body>

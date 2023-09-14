@@ -247,9 +247,7 @@ Como modelo de Seletor de Cores pode ser utilizado o modelo disponível na [W3C]
     <input type="color" id="favcolor" name="favocolor" value="#ff0000"><br />
 ```
 
-## Módulo 3 - Recursos de textos e fontes
-
-**Texto**
+* **Texto**
 
 A estilização de textos com o uso de CSS é dividida em duas partes.
 
@@ -297,4 +295,40 @@ style="letter-spacing: 1px; word-spacing: 5px"
 
 * **Fontes**
 
-Em relação às fontes, há propriedades CSS para definir família, tamanho, estilo, entre outras possibilidades. Vamos conhecer as propriedades mais usadas?
+Em relação às fontes, há propriedades CSS para definir família, tamanho, estilo, entre outras possibilidades. 
+
+1. **Font-Family (Família da Fonte):** Essa propriedade permite escolher a família de fonte que será usada em um elemento da página. Você pode listar várias fontes em ordem de preferência, caso a primeira não esteja disponível no dispositivo do usuário. Por exemplo, "Arial, Helvetica, sans-serif" indica que o navegador deve usar Arial se disponível, caso contrário, Helvetica e, se nenhum deles estiver disponível, uma fonte sans-serif genérica.
+2. **Font-Size (Tamanho da Fonte):** Essa propriedade define o tamanho do texto em um elemento. Você pode usar diferentes unidades de medida, como pixels, porcentagem ou em para especificar o tamanho. Por exemplo, "16px" define um tamanho de fonte de 16 pixels.
+3. **Font-Style (Estilo da Fonte):** Esta propriedade é usada para aplicar estilo itálico ao texto. Ela tem três valores principais: "normal" (sem estilo), "italic" (texto inclinado) e "oblique" (texto inclinado de forma mais acentuada).
+4. **Font-Weight (Peso da Fonte):** A propriedade font-weight define a espessura do texto, incluindo valores como "normal" (padrão), "bold" (negrito), "lighter" (mais leve) e "bolder" (mais ousado). Você também pode usar valores numéricos para um controle mais preciso, variando de 100 (muito fino) a 900 (muito negrito).
+
+* **Web Fontes**
+
+As Web Fontes são um recurso importante em tipografia. Antes, a estilização de texto estava limitada às fontes disponíveis nos sistemas operacionais dos usuários. No entanto, com a introdução da regra `@font-face`, tornou-se possível usar Web Fontes. Essa propriedade permite a utilização de fontes que são baixadas pelo navegador quando a página é carregada. Isso oferece maior controle sobre o layout de uma página em relação às fontes, além da capacidade de usar fontes com designs visuais mais elaborados.
+
+* **Utilizando a regra `@font-face`**
+
+A regra `@font-face` do CSS permite que você incorpore fontes personalizadas em seu site, úteis quando você deseja usar uma fonte que não está disponível nos sistemas dos usuários. Aqui está uma explicação detalhada de como usar a regra `@font-face`:
+
+**`@font-face`**: Esta regra é usada para definir uma fonte personalizada.
+
+**`font-family`**: Aqui, você nomeia a família da fonte que está importando, que será usada em seu CSS para aplicar a fonte aos elementos.
+
+**`src`**: Esta propriedade define onde o navegador deve procurar a fonte. Você pode especificar várias fontes aqui, e o navegador usará a primeira disponível. No exemplo abaixo, primeiro tenta carregar uma fonte local chamada ‘Minha Fonte Local’. Se essa fonte não estiver disponível, tenta ‘Outra Fonte Local’. Se nenhuma fonte local estiver disponível, ele carregará a fonte da web no formato WOFF do caminho especificado.
+
+**`format`**: Esta propriedade especifica o formato da fonte da web. O formato mais comum é WOFF, mas existem outros, como TTF e EOT.
+
+**Observação**: Ao definir uma `@font-face` em seu código, ela será a primeira na lista de fontes definidas. Se o navegador não puder carregar a fonte por algum motivo, passará para a próxima da lista, que também pode ser definida por `font-face` ou `fonte-local`.
+
+```css
+/* Exemplo de como usar a regra @font-face em seu CSS: */
+@font-face {
+  font-family: 'MinhaFontePersonalizada'; /* Nomeie sua fonte */
+  src: local('Minha Fonte Local'), /* Tente esta fonte local primeiro */
+       local('Outra Fonte Local'), /* Se a primeira não estiver disponível, tente esta */
+       url('caminho-da-sua-fonte.woff') format('woff'); /* Se nenhuma fonte local estiver disponível, carregue esta fonte da web */
+}
+```
+
+## Módulo 3 - Conceitos de box model
+

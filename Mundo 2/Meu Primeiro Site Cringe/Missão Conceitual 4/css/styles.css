@@ -30,11 +30,6 @@ input.mini-input {
     font-size: 12px; /* Tamanho da fonte */
 }
 
-/* Define um estilo para todas as tags <h2> */
-h2 {
-    color: #FF0000; /* Define a cor do texto como vermelho */
-}
-
 /* Defina um estilo para todos os elementos <label> */
 label {
     display: inline-block; /* Permite definir largura e alinhar verticalmente */
@@ -107,7 +102,7 @@ hr {
 }
 
 table {
-    font-family: Arial, Calibri;
+    font-family: Calibri, Arial;
 	border-spacing: 1px;
     width: 100%;
 	overflow: hidden;
@@ -128,4 +123,44 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #c0cfe4;
+}
+
+/* Estilize o contêiner do acordeão */
+.accordion-item {
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 8px;
+	background-color: #C3D4DA;
+}
+
+/* Oculte o checkbox */
+input[type=checkbox] {
+  display: none;
+}
+
+/* Estilize o rótulo */
+label.accordion {
+  display: block;
+  background-color: #214376;
+  padding: 10px;
+  cursor: pointer;
+  width: 98%;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+}
+
+/* Oculte o conteúdo por padrão */
+.content {
+  display: none;
+  padding: 8px;
+  background-color: #fff;
+  width: 98%;
+  border: 1px solid #ddd;  
+  color: black;
+}
+
+/* Exiba o conteúdo quando o checkbox correspondente estiver marcado */
+input[type=checkbox]:checked ~ .content {
+  display: block;
 }
