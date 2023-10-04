@@ -332,3 +332,98 @@ A regra `@font-face` do CSS permite que você incorpore fontes personalizadas em
 
 ## Módulo 3 - Conceitos de box model
 
+Neste módulo, avançaremos um pouco mais e percorreremos os conceitos de Box Model (modelo de caixas ou retângulos), Pseudoclasses e Pseudoelementos e Posicionamento.
+
+`CSS`
+
+```css
+#box1 {
+	width: 400px;
+	height: 200px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	}
+	
+#box2 {
+	width: 400px;
+	height: 200px;
+	background-color: blue;
+	margin-top: 30px; /* Distância para o item acima */
+	margin-bottom: 30px; /* Distância para o item abaixo */
+	margin-left: 15px;
+	margin-right: 20px;
+	padding: 50px;
+	color: white;
+	text-align: center;
+	border: 10px solid black;
+	}
+	
+#box3 {
+	width: 400px;
+	height: 200px;
+	background-color: green;
+	color: white;
+}
+```
+
+`HTML`
+
+```html
+<h1 id="tit_modulo">Módulo 3 - Conceitos de box model</h1>
+    <div id="box1">
+        Conteúdo do box 1
+    </div>
+
+    <div id="box2">
+        Conteúdo do box 2
+    </div>
+
+    <div id="box3">
+        Conteúdo do box 3
+    </div>
+```
+
+* **Pseudoclasses**
+
+As pseudoclasses são uma parte importante do CSS (Cascading Style Sheets) e são utilizadas para definir estilos especiais para elementos em diferentes estados. Um estado especial de um elemento pode ser algo como quando o usuário passa o mouse sobre ele, quando um link foi clicado ou quando um elemento está focado, entre outros. Esses estados permitem que você crie interações e estilos dinâmicos em sua página web.
+
+Um exemplo comum é a pseudoclasse `:hover`, que é usada para aplicar estilos a um elemento quando o cursor do mouse está sobre ele. Isso é útil para fornecer feedback visual ao usuário, como alterar a cor de fundo de um botão quando ele é destacado pelo mouse. No entanto, é importante notar que o estilo aplicado usando `:hover` é temporário e se aplica apenas enquanto o elemento está nesse estado específico.
+
+Outra pseudoclasse comum é `:visited`, que é usada para estilizar links que foram clicados anteriormente. Por exemplo, você pode alterar a cor do texto de links visitados para que sejam facilmente distinguíveis dos links não visitados.
+
+A sintaxe para declarar uma pseudoclasse é simples. Ela consiste na palavra-chave correspondente ao nome da pseudoclasse precedida por dois pontos (`:`).
+
+```css
+div:hover {
+    background-color: #000000;
+}
+```
+
+Estamos declarando um estilo para a pseudoclasse `:hover` aplicado a elementos `div`. Isso significa que quando o cursor do mouse passar sobre qualquer elemento `div`, o fundo desse elemento mudará para preto (`#000000`).
+
+Em resumo, as pseudoclasses são uma maneira poderosa de controlar o comportamento e o estilo dos elementos em diferentes estados em uma página web, permitindo uma experiência interativa e atraente para os usuários.
+
+* **Pseudoelemento**
+
+Um exemplo específico do pseudoelemento `::first-letter`. 
+
+Suponhamos que você tenha um parágrafo com o seguinte conteúdo:
+
+```html
+<p id="exemplo">Este é um exemplo de texto.</p>
+```
+
+Agora, você deseja estilizar a primeira letra desse parágrafo com um tamanho de fonte maior e uma cor diferente. Você pode fazer isso usando o pseudoelemento `::first-letter`. Veja como você pode fazer isso:
+
+```css
+#exemplo::first-letter {
+    font-size: 24px; /* Tamanho de fonte maior para a primeira letra */
+    color: blue; /* Cor da primeira letra */
+}
+```
+
+Neste exemplo, estamos usando o pseudoelemento `::first-letter` com o seletor `#exemplo` para estilizar a primeira letra do parágrafo com o ID `exemplo`. A primeira letra terá um tamanho de fonte maior (24px) e será colorida de azul. Não é necessário adicionar uma tag `<span>` extra ao redor da primeira letra; o pseudoelemento `::first-letter` faz isso de forma eficiente.
+
+A principal vantagem do uso de pseudoelementos é que eles podem simplificar seu código, eliminando a necessidade de elementos HTML adicionais apenas para fins de estilização. Além disso, como você mencionou, os pseudoelementos são diferenciados das pseudoclasses usando dois pontos duplos (::) em vez de um único dois pontos (:). Isso ajuda a tornar a sintaxe mais clara e identificável.
+

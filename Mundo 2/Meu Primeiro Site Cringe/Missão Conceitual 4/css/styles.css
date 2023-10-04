@@ -135,32 +135,96 @@ tr:nth-child(even) {
 
 /* Oculte o checkbox */
 input[type=checkbox] {
-  display: none;
+	display: none;
 }
 
 /* Estilize o rótulo */
 label.accordion {
-  display: block;
-  background-color: #214376;
-  padding: 10px;
-  cursor: pointer;
-  width: 98%;
-  text-align: left;
-  color: white;
-  font-weight: bold;
+	display: block;
+	background-color: #214376;
+	padding: 10px;
+	cursor: pointer;
+	width: 98%;
+	text-align: left;
+	color: white;
+	font-weight: bold;
 }
 
 /* Oculte o conteúdo por padrão */
 .content {
-  display: none;
-  padding: 8px;
-  background-color: #fff;
-  width: 98%;
-  border: 1px solid #ddd;  
-  color: black;
+	display: none;
+	padding: 8px;
+	background-color: #fff;
+	width: 98%;
+	border: 1px solid #ddd;  
+	color: black;
 }
 
 /* Exiba o conteúdo quando o checkbox correspondente estiver marcado */
 input[type=checkbox]:checked ~ .content {
   display: block;
+}
+
+#box1 {
+	width: 400px;
+	height: 200px;
+	background-color: red;
+	color: white;
+	text-align: center;
+	}
+	
+#box2 {
+	width: 400px;
+	height: 200px;
+	background-color: blue;
+	margin-top: 30px; /* Distância para o item acima */
+	margin-bottom: 30px; /* Distância para o item abaixo */
+	margin-left: 15px;
+	margin-right: 20px;
+	padding: 50px;
+	color: white;
+	text-align: center;
+	border: 10px solid black;
+	}
+	
+#box3 {
+	text-align: center;
+	width: 400px;
+	height: 200px;
+	background-color: green;
+	color: white;
+}
+
+#box3:hover {
+    background-color: #000000;
+}
+
+#box3::first-letter {
+
+    font-size: 24px; /* Tamanho de fonte maior para a primeira letra */
+	font-weight: bold;
+    color: blue; /* Cor da primeira letra */
+}
+
+/* Definindo um grid com 3 colunas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
+    gap: 20px; /* Espaço entre as colunas */
+    padding: 20px;
+}
+
+/* Estilizando os itens do grid (colunas) */
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Estilizando o cabeçalho */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
